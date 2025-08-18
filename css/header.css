@@ -1,0 +1,101 @@
+.header {
+  background-color: var(--red-accent);
+  padding: 37px 0px
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo-link {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 32px;
+  color: var(--white)
+}
+
+.header__menu-btn {
+  display: none;/* Скрываем на больших экранах */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  }
+
+  .header__menu-btn span {
+    display: block;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    
+  }
+
+.header__list {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.header__list-link {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.header__list-link:hover,
+.header__list-link:focus {
+  color: #ffcccc; /* светло-розовый */
+  text-decoration: underline;
+  transition: .3s;
+}
+
+.header__link-tel {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.header__link-tel:hover,
+.header__link-tel:focus {
+  color: #ffcccc; /* светло-розовый */
+  text-decoration: underline;
+  transition: all .3s;
+}
+
+@media (max-width: 1024px) {
+
+  .header__menu-btn {
+    display: flex;
+    order: 2; /* Кнопка будет после навигации */
+    margin-left: auto; /* Сдвигает кнопку вправо */
+  }
+
+  .nav-menu {
+    display: none;
+    order: 1; /* Навигация будет слева */
+    display: none; /* Скрываем меню по умолчанию */
+    flex-direction: column; /* Вертикальное расположение пунктов меню */
+    width: 100%; /* Занимает всю ширину */
+    margin-top: 10px; /* Отступ сверху для отделения от кнопки */
+
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+  
+  .header__list {
+    flex-direction: column; /* Вертикальное расположение пунктов меню */
+    gap: 10px; /* Отступ между пунктами меню */
+  }
+  .header__link-tel {
+    display: none;
+  }
+}
