@@ -1,0 +1,208 @@
+.reviews {
+  padding: 100px 0;
+  background-color: var(--white);
+}
+
+.reviews__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.reviews__title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 68px;
+  color: var(--black);
+  margin-bottom: 24px;
+}
+
+.reviews__text {
+  max-width: 720px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  color: var(--black);
+  margin-bottom: 80px;
+}
+
+.reviews__wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.reviews__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px 32px;
+}
+
+.reviews__img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 32px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50% ;
+}
+
+.reviews__card-text {
+  max-width: 476px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  color: var(--black);
+  margin-bottom: 32px;
+}
+
+.reviews__photograph-name {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--black);
+  margin-bottom: 4px;
+
+}
+
+.reviews__profession-text {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.4);
+
+}
+
+
+@media (max-width: 1024px) {
+  .reviews__title {
+    font-size: 48px;
+    line-height: 52px;
+    margin-bottom: 20px;
+  }
+
+  .reviews__text {
+    font-size: 20px;
+    line-height: 26px;
+    max-width: 600px;
+    margin-bottom: 60px;
+  }
+
+  .reviews__wrap {
+    gap: 20px;
+  }
+
+  .reviews__card-text {
+    max-width: 400px;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 24px;
+  }
+
+  .reviews__card {
+    padding: 30px 24px;
+  }
+}
+
+/* До 768px — меняем раскладку на колонну */
+@media (max-width: 768px) {
+  .reviews__wrap {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .reviews__card-text {
+    max-width: 100%;
+    font-size: 18px;
+  }
+
+  .reviews__title {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+
+  .reviews__text {
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 90%;
+    margin-bottom: 40px;
+  }
+
+  .reviews__card {
+    padding: 24px 16px;
+  }
+}
+
+/* До 480px — уменьшаем отступы и шрифты еще */
+@media (max-width: 480px) {
+  .reviews__title {
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 16px;
+  }
+
+  .reviews__text {
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 90%;
+    margin-bottom: 32px;
+  }
+
+  .reviews__card-text {
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .reviews__card {
+    padding: 20px 12px;
+  }
+
+  .reviews__img {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 24px;
+  }
+}
+
+/* До 320px — еще компактнее */
+@media (max-width: 320px) {
+  .reviews__title {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 12px;
+  }
+
+  .reviews__text {
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 90%;
+    margin-bottom: 24px;
+  }
+
+  .reviews__card-text {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 16px;
+  }
+
+  .reviews__card {
+    padding: 16px 8px;
+  }
+
+  .reviews__img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 20px;
+  }
+
+  .reviews__photograph-name {
+    font-size: 16px;
+  }
+}

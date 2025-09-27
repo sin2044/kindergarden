@@ -1,0 +1,316 @@
+.booking {
+  position: relative;
+  padding: 100px 0;
+  background-image: url(../img/booking_bgr.webp);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+}
+
+.booking::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.booking__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.booking__title {
+  max-width: 540px;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 52px;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.booking__text {
+  max-width: 540px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 40px;
+
+}
+
+.booking__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+}
+
+.booking__form-label {
+  margin-bottom: 8px;
+}
+
+.booking__form-input_last {
+  margin-bottom: 24px;
+}
+
+.booking__form-input {
+  width: 540px;
+  padding: 16px 20px;
+  border: 1px solid  rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  transition: .3s;
+
+}
+
+.booking__form-input:hover {
+    border-color: #007bff; /* Цвет границы при наведении */
+}
+
+
+.booking__form-input:focus {
+    border-color: #0056b3; /* Цвет границы при фокусе */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Тень при фокусе */
+    outline: none; /* Убираем стандартное обрамление */
+}
+
+
+.booking__form-input:active {
+    border-color: #0056b3; /* Цвет границы при активном состоянии */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Тень при активном состоянии */
+}
+.booking__form-input::placeholder {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.2);
+
+}
+
+.booking__form-first-text {
+  align-self: flex-start;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.booking__form-radio-label {
+  position: relative;
+  display: flex;
+  align-self: flex-start;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.booking__form-radio-label_last {
+  margin-bottom: 48px;
+}
+
+.booking__form-radio-input {
+  appearance: none;
+
+}
+
+.booking__form-span-radio {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  margin-right: 12px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+
+
+}
+
+
+.booking__form-span-radio:before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 50%;
+  left: 50%;
+  border-radius: 8px;
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+  opacity: 0;
+  
+}
+.booking__form-radio-input:checked + .booking__form-span-radio {
+  background-color: var(--red-accent);
+  border-color: var(--red-accent);
+
+}
+.booking__form-radio-input:checked + .booking__form-span-radio:before {
+  opacity: 1;
+  background-color: var(--white);
+  border: none;
+}
+
+
+.booking__form-radio-label:hover .booking__form-span-radio {
+  border-color: var(--red-accent);
+  background-color: rgba(255, 0, 0, 0.1); /* очень легкий прозрачный красный фон */
+  cursor: pointer;
+}
+
+.booking__form-radio-input:focus + .booking__form-span-radio {
+  outline: 2px solid var(--red-accent);
+  outline-offset: 2px;
+  background-color: rgba(255, 0, 0, 0.2);
+  box-shadow: 0 0 6px var(--red-accent);
+}
+.booking__form-radio-label:active .booking__form-span-radio {
+  background-color: var(--red-accent);
+  border-color: var(--red-accent);
+  transform: scale(0.95); /* уменьшение с эффектом нажатия */
+  transition: transform .3s ease;
+}
+
+.booking__form-btn {
+  padding: 16px 221px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  background-color: var(--red-accent);
+  color: var(--white);
+  margin-bottom: 24px;
+  transition: .3s;
+}
+
+
+.booking__form-btn:hover {
+  background-color: #690f0f;
+
+}
+
+.booking__form-btn:focus {
+  background-color: #f04444;
+}
+
+.booking__form-btn:active {
+  background-color: #b35f5f;
+}
+
+.booking__form-second-text {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  color:rgba(255, 255, 255, 0.7);
+
+}
+
+@media (max-width: 1024px) {
+  .booking__form-input {
+    width: 480px;
+  }
+  .booking__form-btn {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+
+/* При ширине экрана до 758px */
+@media (max-width: 758px) {
+  .booking__container {
+    padding: 0 20px;
+  }
+  .booking__form-input {
+    width: 100%;
+    max-width: 420px;
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+  .booking__form-btn {
+    padding-left: 80px;
+    padding-right: 80px;
+    font-size: 16px;
+  }
+  .booking__title {
+    font-size: 36px;
+    line-height: 42px;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  .booking__text {
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}
+
+/* При ширине экрана до 480px */
+@media (max-width: 480px) {
+  .booking__form-input {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+  .booking__form-btn {
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .booking__title {
+    font-size: 28px;
+    line-height: 32px;
+    padding: 0 8px;
+  }
+  .booking__text {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0 8px;
+  }
+  .booking__form-radio-label {
+    font-size: 16px;
+  }
+  .booking__form-radio-span {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* При ширине экрана до 320px */
+@media (max-width: 320px) {
+  .booking__form-input {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+  .booking__form-btn {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 13px;
+  }
+  .booking__title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .booking__text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .booking__form-radio-label {
+    font-size: 14px;
+  }
+  .booking__form-radio-span {
+    width: 18px;
+    height: 18px;
+  }
+}

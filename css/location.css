@@ -1,0 +1,159 @@
+
+.location {
+  position: relative;
+  background-color: rgba(48, 136, 255, 1);
+  padding: 120px 0; /* верхний и нижний паддинг */
+  height: 600px;    /* фиксированная высота секции */
+  overflow: visible;
+}
+
+.location__container {
+  display: grid;
+  grid-template-columns:
+    repeat(6, 65px)
+    repeat(7, 103px);   
+  max-width: 1110px;
+  position: relative;
+  height: 600px;
+
+
+}
+
+
+
+.location__text-wrap {
+  grid-column: 2 / 7;  /* текст занимает колонки с 2 по 6 */
+  max-width: 390px;    /* при необходимости, можно убрать */
+}
+
+.location__title {
+  font-family: Inter;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 34px;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.location__address {
+  max-width: 445px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--white);
+}
+
+.location__email {
+  margin-bottom: 12px;
+
+}
+
+.location__map-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 705px;
+  height: 100%; /* во всю высоту секции */
+  box-sizing: border-box;
+}
+
+.location__map-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .location__container {
+    max-width: 900px;
+    height: 500px;
+    grid-template-columns:
+      repeat(6, 43px)
+      repeat(7, 65px);
+  }
+
+  .location__text-wrap {
+    max-width: 260px;
+    grid-column: 2 / 7;
+  }
+
+  .location__map-wrap {
+    width: 540px;
+    height: 100%;
+  }
+}
+
+
+/* ≤768px: уменьшаем высоту и делаем немного компактнее */
+@media (max-width: 768px) {
+  .location {
+    padding: 80px 0;
+    height: 450px;
+    
+  }
+
+  .location__container {
+    max-width: 700px;
+    height: 450px;
+    grid-template-columns:
+      repeat(6, 35px)
+      repeat(7, 15px);
+  }
+
+  .location__text-wrap {
+    max-width: 210px;
+  }
+
+  .location__map-wrap {
+    width: 460px;
+    height: 100%;
+  }
+}
+
+/* ≤480px: вертикальная верстка (текст сверху, карта снизу), высота под контент */
+@media (max-width: 480px) {
+  .location {
+    padding: 60px 20px;
+    height: auto;
+  }
+
+  .location__container {
+    display: block; /* отменяем grid */
+    max-width: 100%;
+    height: auto;
+  }
+
+  .location__text-wrap {
+    max-width: 100%;
+    margin-bottom: 30px;
+    grid-column: unset;
+  }
+
+  .location__map-wrap {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    top: unset;
+    right: unset;
+  }
+}
+
+/* ≤320px: еще более компактно */
+@media (max-width: 320px) {
+  .location {
+    padding: 40px 15px;
+  }
+
+  .location__text-wrap {
+    font-size: 14px; /* можно уменьшить шрифты, например */
+  }
+
+  .location__map-wrap {
+    height: 200px;
+  }
+}

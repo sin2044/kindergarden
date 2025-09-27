@@ -10,14 +10,14 @@
 </head>
 <body>
   <header class="header">
-    <div class="header__container container">
+    <div class="header__container">
       <p class="header__logo"><a href="#" class="header__logo-link">Частный детский сад</a></p>
-      <button class="header__menu-btn"  aria-label="Открыть меню">
+      <button class="header__menu-btn"  aria-label="Открыть меню" aria-expanded="false" aria-controls="main-navigation">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <nav class="header__nav nav-menu">
+      <nav class="header__nav nav-menu" id="main-navigation" aria-label="Основное меню сайта"></nav>
         <ul class="header__list">
           <li class="header__list-item"><a href="#" class="header__list-link">О компании</a></li>
           <li class="header__list-item"><a href="#" class="header__list-link">Новости</a></li>
@@ -26,36 +26,443 @@
           <li class="header__list-item"><a href="#" class="header__list-link">Контакты</a></li>
         </ul>
       </nav>
-      <a href="tel:+7 495 123-45-67"  class="header__link-tel">+7 495 123-45-67</a>
+      <a href="tel:+74951234567"  class="header__link-tel">+74951234567</a>
     </div>
   </header>
-    <section class="intro">
+  <main class="main">
+        <section class="intro">
       <div class="intro__container container">
-        <h1 class="intro__title">Частный детский сад</h1>
-        <p class="intro__text">
-          Мы — онлайн-университет, который обучает веб-дизайну с гарантированным трудоустройством
-        </p>
-        <form action="#" class="intro__text form">
+        <div class="intro__text-wrap">
+          <h1 class="intro__title">Частный детский сад</h1>
+          <p class="intro__text">
+            Мы — онлайн-университет, который обучает веб-дизайну с гарантированным трудоустройством
+          </p>
+
+        </div>
+
+        <div class="intro__form-wrapper">
+          <form action="#" class="intro__form form">
           <p class="form__text">
             Запишите ребенка на пробное занятие в наш детский сад
           </p>
           <label class="form__name-label">
             <input type="text" class="form__name-input" placeholder="Введите имя">
           </label>
-          <label class="form__email-label">
-            <input type="email" class="form__email-input" placeholder="Введите email">
+          <label class="form__tel-label">
+            <input type="tel" class="form__tel-input" placeholder="Введите телефон">
           </label>
+          <button class="form__btn">Записать</button>
+          <p class="form__price-text">+ Скидка 50% на первый месяц обучения</p>
+        </form>
+        </div>
+      </div>
+    </section>
+    <section class="info">
+      <div class="info__container container">
+        <div class="info__text-wrap">
+          <p class="info__text">
+            Наш детский сад
+          </p>
+          <h2 class="info__title">
+            Дарим радость детям 365 дней
+          </h2>
+          <p class="info__first-paragraph">
+            Выбор детского сада для своего ребёнка всегда очень сложный. Открывая этот детский сад, я задавала себе один вопрос: «Захотела бы я отдать сюда своего ребёнка?». 
+          </p>
+          <p class="info__second-paragraph">
+            У нас очень добрые профессиональные воспитатели, передовые методики обучения и развития, безопасная среда и самые высокие стандарты качества. Приходите к нам в детский сад!
+          </p>
+          <a class="info__link" href="#" role="button">Большая</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="benefits__container container">
+        <p class="benefits__text">
+          Преимущества
+        </p>
+        <h2 class="benefits__title">
+          Приходите в наш сад
+        </h2>
+        <p class="benefits__text-descr">
+          Более 5 лет мы дарим радость вашим детям и способствуем их развитию каждый день
+        </p>
+        <div class="benefits__wrap">
+          <div class="benefits__card">
+            <div class="benefits__logo">
+              <svg viewBox="0 0 32 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.000000" height="30.000000" fill="none" customframe="#000000">
+	              <path id="%" d="M4.4946 27.9144L7.95198 30L27.5438 2.48663L24.2401 0L4.4946 27.9144ZM0 8.14171C0 12.3128 3.18848 15.2406 7.37575 15.2406C11.563 15.2406 14.7131 12.3128 14.7131 8.14171C14.7131 3.93048 11.563 1.00268 7.37575 1.00268C3.18848 1.00268 0 3.93048 0 8.14171ZM4.34094 8.14171C4.34094 6.17647 5.7623 4.89305 7.37575 4.89305C8.9892 4.89305 10.3721 6.17647 10.3721 8.14171C10.3721 10.1471 9.02761 11.4305 7.37575 11.4305C5.80072 11.4305 4.34094 10.1471 4.34094 8.14171ZM17.2869 22.2193C17.2869 26.3904 20.4754 29.3583 24.6627 29.3583C28.8115 29.3583 32 26.3904 32 22.2193C32 18.008 28.8115 15.1203 24.6627 15.1203C20.4754 15.1203 17.2869 18.008 17.2869 22.2193ZM21.6278 22.2193C21.6278 20.2139 23.0492 18.9305 24.6627 18.9305C26.2377 18.9305 27.6591 20.2139 27.6591 22.2193C27.6591 24.1845 26.2761 25.4679 24.6627 25.4679C23.0876 25.4679 21.6278 24.1845 21.6278 22.2193Z" fill="rgb(48,136,255)" fill-rule="nonzero" />
+              </svg>
+            </div>
+            <h3 class="benefits__card-title">
+              Площадка для прогулок
+            </h3>
+            <p class="benefits__card-text">
+              на закрытой территории ЖК
+            </p>
+            
+          </div>
+          <div class="benefits__card">
+            <div class="benefits__logo">
+              <svg viewBox="0 0 32 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.000000" height="30.000000" fill="none" customframe="#000000">
+	              <path id="%" d="M4.4946 27.9144L7.95198 30L27.5438 2.48663L24.2401 0L4.4946 27.9144ZM0 8.14171C0 12.3128 3.18848 15.2406 7.37575 15.2406C11.563 15.2406 14.7131 12.3128 14.7131 8.14171C14.7131 3.93048 11.563 1.00268 7.37575 1.00268C3.18848 1.00268 0 3.93048 0 8.14171ZM4.34094 8.14171C4.34094 6.17647 5.7623 4.89305 7.37575 4.89305C8.9892 4.89305 10.3721 6.17647 10.3721 8.14171C10.3721 10.1471 9.02761 11.4305 7.37575 11.4305C5.80072 11.4305 4.34094 10.1471 4.34094 8.14171ZM17.2869 22.2193C17.2869 26.3904 20.4754 29.3583 24.6627 29.3583C28.8115 29.3583 32 26.3904 32 22.2193C32 18.008 28.8115 15.1203 24.6627 15.1203C20.4754 15.1203 17.2869 18.008 17.2869 22.2193ZM21.6278 22.2193C21.6278 20.2139 23.0492 18.9305 24.6627 18.9305C26.2377 18.9305 27.6591 20.2139 27.6591 22.2193C27.6591 24.1845 26.2761 25.4679 24.6627 25.4679C23.0876 25.4679 21.6278 24.1845 21.6278 22.2193Z" fill="rgb(48,136,255)" fill-rule="nonzero" />
+              </svg>
+            </div>
+              <h3 class="benefits__card-title">
+                Видеонаблюдение
+            </h3>
+            <p class="benefits__card-text">
+              Видеонаблюдение: онлайн, через приложение
+            </p>
+
+          </div>
+          <div class="benefits__card">
+            <div class="benefits__logo">
+              <svg viewBox="0 0 32 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.000000" height="30.000000" fill="none" customframe="#000000">
+	              <path id="%" d="M4.4946 27.9144L7.95198 30L27.5438 2.48663L24.2401 0L4.4946 27.9144ZM0 8.14171C0 12.3128 3.18848 15.2406 7.37575 15.2406C11.563 15.2406 14.7131 12.3128 14.7131 8.14171C14.7131 3.93048 11.563 1.00268 7.37575 1.00268C3.18848 1.00268 0 3.93048 0 8.14171ZM4.34094 8.14171C4.34094 6.17647 5.7623 4.89305 7.37575 4.89305C8.9892 4.89305 10.3721 6.17647 10.3721 8.14171C10.3721 10.1471 9.02761 11.4305 7.37575 11.4305C5.80072 11.4305 4.34094 10.1471 4.34094 8.14171ZM17.2869 22.2193C17.2869 26.3904 20.4754 29.3583 24.6627 29.3583C28.8115 29.3583 32 26.3904 32 22.2193C32 18.008 28.8115 15.1203 24.6627 15.1203C20.4754 15.1203 17.2869 18.008 17.2869 22.2193ZM21.6278 22.2193C21.6278 20.2139 23.0492 18.9305 24.6627 18.9305C26.2377 18.9305 27.6591 20.2139 27.6591 22.2193C27.6591 24.1845 26.2761 25.4679 24.6627 25.4679C23.0876 25.4679 21.6278 24.1845 21.6278 22.2193Z" fill="rgb(48,136,255)" fill-rule="nonzero" />
+              </svg>
+            </div>
+              <h3 class="benefits__card-title">
+                5-разовое питание
+            </h3>
+            <p class="benefits__card-text">
+              5-разовое, с учётом индивидуальных особенностей ребёнка
+            </p>
+          </div>
+
+          <div class="benefits__card">
+            <div class="benefits__logo">
+              <svg viewBox="0 0 32 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.000000" height="30.000000" fill="none" customframe="#000000">
+	              <path id="%" d="M4.4946 27.9144L7.95198 30L27.5438 2.48663L24.2401 0L4.4946 27.9144ZM0 8.14171C0 12.3128 3.18848 15.2406 7.37575 15.2406C11.563 15.2406 14.7131 12.3128 14.7131 8.14171C14.7131 3.93048 11.563 1.00268 7.37575 1.00268C3.18848 1.00268 0 3.93048 0 8.14171ZM4.34094 8.14171C4.34094 6.17647 5.7623 4.89305 7.37575 4.89305C8.9892 4.89305 10.3721 6.17647 10.3721 8.14171C10.3721 10.1471 9.02761 11.4305 7.37575 11.4305C5.80072 11.4305 4.34094 10.1471 4.34094 8.14171ZM17.2869 22.2193C17.2869 26.3904 20.4754 29.3583 24.6627 29.3583C28.8115 29.3583 32 26.3904 32 22.2193C32 18.008 28.8115 15.1203 24.6627 15.1203C20.4754 15.1203 17.2869 18.008 17.2869 22.2193ZM21.6278 22.2193C21.6278 20.2139 23.0492 18.9305 24.6627 18.9305C26.2377 18.9305 27.6591 20.2139 27.6591 22.2193C27.6591 24.1845 26.2761 25.4679 24.6627 25.4679C23.0876 25.4679 21.6278 24.1845 21.6278 22.2193Z" fill="rgb(48,136,255)" fill-rule="nonzero" />
+              </svg>
+            </div>
+              <h3 class="benefits__card-title">
+                Медосмотр
+            </h3>
+            <p class="benefits__card-text">
+              Утренний фильтр медработником: ежедневно
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="quote">
+      <div class="quote__container container">
+        <div class="quote__icon">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64.000000" height="64.000000" fill="none">
+	          <rect id="24 / Quote" width="64.000000" height="64.000000" x="0.000000" y="0.000000" fill="rgb(255,255,255)" fill-opacity="0" />
+	          <path id="“" d="M29.2992 43.6339C26.844 40.3797 24.0614 36.3119 24.0614 31.5932C24.0614 26.5492 26.5166 21.3424 31.2634 16.9492L20.9514 8C11.2941 13.8576 0 23.1322 0 37.6136C0 44.122 4.7468 50.7932 9.32992 56L29.2992 43.6339ZM62.0358 43.6339C59.5806 40.3797 56.798 36.3119 56.798 31.5932C56.798 26.5492 59.2532 21.3424 64 16.9492L53.688 8C44.0307 13.8576 32.7366 23.1322 32.7366 37.6136C32.7366 44.122 37.4834 50.7932 42.0665 56L62.0358 43.6339Z" fill="rgb(255,0,90)" fill-rule="nonzero" />
+          </svg>
+        </div>
+        <blockquote class="quote__blockquote">
+          Дети сразу и непринужденно осваиваются со счастьем, ибо они сами по природе своей — радость и счастье.
+          <cite class="quote__author">
+          — В. Гюго
+          </cite>
+        </blockquote>
+
+      </div>
+    </section>
+
+    <section class="additional">
+      <div class="additional__container container">
+        <h2 class="additional__title">
+          Дополнительные занятия
+        </h2>
+        <p class="additional__text">
+          Приводите вашего ребенка на увлекательные занятия
+        </p>
+
+        <div class="additional__wrap">
+          <div class="additional__card card-1-bgr">
+            <p class="additional__card-text">
+              Театр для малышей
+            </p>
+            <p class="additional__card-price">
+              350 ₽
+            </p>
+
+          </div>
+          <div class="additional__card card-2-bgr">
+            <p class="additional__card-text">
+              Для самых маленьких
+            </p>
+            <p class="additional__card-price">
+              450 ₽
+            </p>
+
+          </div>
+          <div class="additional__card card-3-bgr">
+             <p class="additional__card-text">
+                Юный художник
+            </p>
+            <p class="additional__card-price">
+              350 ₽
+            </p>
+          </div>
+          <div class="additional__card card-4-bgr ">
+             <p class="additional__card-text">
+                Маленький конструктор
+            </p>
+            <p class="additional__card-price">
+              350 ₽
+            </p>
+          </div>
+          <div class="additional__card card-5-bgr">
+             <p class="additional__card-text">
+                Начинающий инженер
+            </p>
+            <p class="additional__card-price">
+              405 ₽
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="media">
+      <div class="media__container container">
+        <div class="media__video">
+        <iframe 
+          src="https://www.youtube.com/embed/JhxtUoEdXI0?si=jjvtEAW61I9WGOLR" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen
+          loading="lazy">  <!-- Добавил для производительности -->
+      </iframe>
+        </div>
+        <h2 class="media__title">
+          Видео про наш сад
+        </h2>
+        <p class="media__text">
+          Посмотрите, как здорово мы работаем. Как счастливы дети и какаякомфортная среда создана для их развития
+        </p>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <div class="reviews__container container">
+        <h2 class="reviews__title">
+          Отзывы
+        </h2>
+        <p class="reviews__text">
+          Будем благодарны, если вы уделите время и напишите отзыв о нашем детском саду
+        </p>
+        <div class="reviews__wrap">
+          <div class="reviews__card">
+            <img src="img/reviewers_img.webp" alt="Фото пользователя, который оставил отзыв" class="reviews__img">
+            <p class="reviews__card-text">
+              Это супер крутая инструкция и вы делаете очень полезную вещь 🙂 Спасибо ❤️
+            </p>
+            <p class="reviews__photograph-name">
+              Юрий Ставничий
+            </p>
+            <p class="reviews__profession-text">
+              Фотограф
+            </p>
+          </div>
+
+          <div class="reviews__card">
+            <img src="img/reviewers_img.webp" alt="Фото пользователя, который оставил отзыв" class="reviews__img">
+            <p class="reviews__card-text">
+              Работа с сервисом приносит радость, потому что высочайший профессионализм, удобство, оперативность, и просто приятные люди!
+            </p>
+            <p class="reviews__photograph-name">
+              Александра Селезнева
+              
+            </p>
+            <p class="reviews__profession-text">
+              Фотограф
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="booking">
+      <div class="booking__container container">
+        <h2 class="booking__title">
+          Запишитесь в детский сад онлайн
+        </h2>
+        <p class="booking__text">
+          Заполните заявку прямо сейчас и мы свяжемся с вами в течении 20 дней
+        </p>
+        <form action="#" class="booking__form">
+          <label class="booking__form-label">
+            <input type="text" class="booking__form-input" placeholder="Ваше имя">
+          </label>
+          <label class="booking__form-label">
+            <input type="tel" class="booking__form-input" placeholder="Ваше имя">
+          </label>
+          <label class="booking__form-label">
+            <input type="text" class="booking__form-input booking__form-input_last" placeholder="Возраст ребенка">
+          </label>
+          <p class="booking__form-first-text">
+            Что вас интересует
+          </p>
+          <label class="booking__form-radio-label">
+            <input type="radio" name="time" value="day" class="booking__form-radio-input">
+            <span class="booking__form-span-radio">
+            </span>
+            Дневное посещение
+          </label>
+          <label class="booking__form-radio-label">
+            <input type="radio" name="time" value="evening" class="booking__form-radio-input">
+            <span class="booking__form-span-radio">
+            </span>
+            Вечернее посещение
+          </label>
+          <label class="booking__form-radio-label booking__form-radio-label_last">
+            <input type="radio" name="time" value="additional" class="booking__form-radio-input">
+            <span class="booking__form-span-radio">
+            </span>
+            Дополнительные услуги
+          </label>
+          <button class="booking__form-btn">Записаться</button>
+          <p class="booking__form-second-text">
+            Оставляя заявку, вы соглашаетесь на обработку персональных данных
+          </p>
         </form>
       </div>
     </section>
 
-<script>
-  const menuToggle = document.querySelector('.header__menu-btn');
-  const navMenu = document.querySelector('.nav-menu');
+    <section class="location">
+  <div class="location__container container">
+    <div class="location__text-wrap">
+      <h2 class="location__title">Контакты</h2>
+      <address class="location__address">
+        <a href="tel:+7 987 654-32-10" class="location__tel">+7 987 654-32-10</a>
+        <a href="mailto:info@constructor.ru" class="location__email">info@constructor.ru</a>
+        <p class="location__text">г. Москва, метро “Китай город”, ул. Яузская, дом 15/11</p>
+      </address>
+    </div>
+  </div>
 
-  menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-  });
+  <!-- Карта вынесена *за* контейнер -->
+  <div class="location__map-wrap">
+    <iframe
+      src="https://yandex.ru/map-widget/v1/?ll=37.655542%2C55.743816&mode=search&ol=geo&z=15.58"
+      allowfullscreen="true"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</section>
+
+    <section class="partners">
+      <div class="partners__container container">
+        <h2 class="partners__title">
+          Партнеры
+        </h2>
+        <p class="partners__text">
+          С нами сотрудничают лучшие компании нашего города. Мы очень ценим наших партнёров
+        </p>
+        <div class="partners__wrap">
+          <div class="partners__card">
+            <a href="#" class="partners__logo-link">
+              <img src="img/partners_card-1.png" alt="Логотип партнеров" class="partners__logo-img">
+            </a>
+
+            
+
+          </div>
+          <div class="partners__card">
+            <a href="#" class="partners__logo-link">
+              <img src="img/partners_card-2.png" alt="Логотип партнеров" class="partners__logo-img">
+            </a>
+
+          </div>
+          <div class="partners__card">
+            <a href="#" class="partners__logo-link">
+              <img src="img/partners_card-3.png" alt="Логотип партнеров" class="partners__logo-img">
+            </a>
+
+          </div>
+          <div class="partners__card">
+              <a href="#" class="partners__logo-link">
+              <img src="img/partners_card-4.png" alt="Логотип партнеров" class="partners__logo-img">
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__social">
+          <a href="#" class="footer__social-link">
+            <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56.000000" height="56.000000" fill="none" customFrame="#000000">
+			        <rect width="24.000000" height="24.000000" x="16.000000" y="16.000000" fill="rgb(255,255,255)" />
+	            <rect id="Social Button / Light" width="56.000000" height="56.000000" x="0.000000" y="0.000000" />
+	            <circle id="Ellipse 2" cx="28" cy="28" r="28" fill="rgb(255,0,90)" />
+		          <rect id="24 / Facebook" width="24.000000" height="24.000000" x="16.000000" y="16.000000" fill="rgb(255,255,255)" fill-opacity="0" />
+		          <path id="Vector" d="M39.9981 27.9991C39.9981 21.3722 34.626 16 27.9991 16C21.3722 16 16 21.3722 16 27.9991C16 33.9882 20.3879 38.9522 26.1242 39.8524L26.1242 31.4676L23.0776 31.4676L23.0776 27.9991L26.1242 27.9991L26.1242 25.3555C26.1242 22.3483 27.9156 20.6871 30.6564 20.6871C31.9692 20.6871 33.3424 20.9215 33.3424 20.9215L33.3424 23.8744L31.8294 23.8744C30.3388 23.8744 29.8739 24.7993 29.8739 25.7482L29.8739 27.9991L33.2018 27.9991L32.6698 31.4676L29.8739 31.4676L29.8739 39.8524C35.6103 38.9522 39.9981 33.9882 39.9981 27.9991Z" fill="rgb(255,255,255)" fill-rule="nonzero" />
+            </svg>
+
+
+          </a>
+
+          <a href="#" class="footer__social-link">
+            <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56.000000" height="56.000000" fill="none" customFrame="#000000">
+			        <rect width="24.000000" height="24.000000" x="16.000000" y="16.000000" fill="rgb(255,255,255)" />
+	            <rect id="Social Button / Light" width="56.000000" height="56.000000" x="0.000000" y="0.000000" />
+	            <circle id="Ellipse 2" cx="28" cy="28" r="28" fill="rgb(255,0,90)" />
+		          <rect id="24 / Instagram" width="24.000000" height="24.000000" x="16.000000" y="16.000000" fill="rgb(255,255,255)" fill-opacity="0" />
+		          <path id="Vector" d="M28 16C24.74 16 24.333 16.015 23.053 16.072C21.775 16.132 20.905 16.333 20.14 16.63C19.351 16.936 18.681 17.347 18.014 18.014C17.347 18.681 16.935 19.35 16.63 20.14C16.333 20.905 16.131 21.775 16.072 23.053C16.012 24.333 16 24.74 16 28C16 31.26 16.015 31.667 16.072 32.947C16.132 34.224 16.333 35.095 16.63 35.86C16.936 36.648 17.347 37.319 18.014 37.986C18.681 38.652 19.35 39.065 20.14 39.37C20.906 39.666 21.776 39.869 23.053 39.928C24.333 39.988 24.74 40 28 40C31.26 40 31.667 39.985 32.947 39.928C34.224 39.868 35.095 39.666 35.86 39.37C36.648 39.064 37.319 38.652 37.986 37.986C38.652 37.319 39.065 36.651 39.37 35.86C39.666 35.095 39.869 34.224 39.928 32.947C39.988 31.667 40 31.26 40 28C40 24.74 39.985 24.333 39.928 23.053C39.868 21.776 39.666 20.904 39.37 20.14C39.064 19.351 38.652 18.681 37.986 18.014C37.319 17.347 36.651 16.935 35.86 16.63C35.095 16.333 34.224 16.131 32.947 16.072C31.667 16.012 31.26 16 28 16ZM28 18.16C31.203 18.16 31.585 18.176 32.85 18.231C34.02 18.286 34.655 18.48 35.077 18.646C35.639 18.863 36.037 19.123 36.459 19.542C36.878 19.962 37.138 20.361 37.355 20.923C37.519 21.345 37.715 21.98 37.768 23.15C37.825 24.416 37.838 24.796 37.838 28C37.838 31.204 37.823 31.585 37.764 32.85C37.703 34.02 37.508 34.655 37.343 35.077C37.119 35.639 36.864 36.037 36.444 36.459C36.025 36.878 35.62 37.138 35.064 37.355C34.644 37.519 33.999 37.715 32.829 37.768C31.555 37.825 31.18 37.838 27.97 37.838C24.759 37.838 24.384 37.823 23.111 37.764C21.94 37.703 21.295 37.508 20.875 37.343C20.306 37.119 19.915 36.864 19.496 36.444C19.075 36.025 18.806 35.62 18.596 35.064C18.431 34.644 18.237 33.999 18.176 32.829C18.131 31.569 18.115 31.18 18.115 27.985C18.115 24.789 18.131 24.399 18.176 23.124C18.237 21.954 18.431 21.31 18.596 20.89C18.806 20.32 19.075 19.93 19.496 19.509C19.915 19.09 20.306 18.82 20.875 18.611C21.295 18.445 21.926 18.25 23.096 18.19C24.371 18.145 24.746 18.13 27.955 18.13L28 18.16ZM28 21.838C24.595 21.838 21.838 24.598 21.838 28C21.838 31.405 24.598 34.162 28 34.162C31.405 34.162 34.162 31.402 34.162 28C34.162 24.595 31.402 21.838 28 21.838ZM28 32C25.79 32 24 30.21 24 28C24 25.79 25.79 24 28 24C30.21 24 32 25.79 32 28C32 30.21 30.21 32 28 32ZM35.846 21.595C35.846 22.39 35.2 23.035 34.406 23.035C33.611 23.035 32.966 22.389 32.966 21.595C32.966 20.801 33.612 20.156 34.406 20.156C35.199 20.155 35.846 20.801 35.846 21.595Z" fill="rgb(255,255,255)" fill-rule="nonzero" />
+            </svg>
+          </a>
+
+          <a href="#" class="footer__social-link">
+            <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56.000000" height="56.000000" fill="none" customFrame="#000000">
+			        <rect width="24.000000" height="24.000000" x="16.000000" y="16.000000" fill="rgb(255,255,255)" />
+	            <rect id="Social Button / Light" width="56.000000" height="56.000000" x="0.000000" y="0.000000" />
+	            <circle id="Ellipse 2" cx="28" cy="28" r="28" fill="rgb(255,0,90)" />
+		          <rect id="24 / Twitter" width="24.000000" height="24.000000" x="16.000000" y="16.000000" fill="rgb(255,255,255)" fill-opacity="0" />
+		          <path id="Vector" d="M39.954 20.5691C39.069 20.9581 38.124 21.2231 37.129 21.3441C38.143 20.7331 38.923 19.7701 39.292 18.6211C38.341 19.1761 37.287 19.5801 36.165 19.8051C35.269 18.8461 33.992 18.2461 32.574 18.2461C29.857 18.2461 27.654 20.4491 27.654 23.1631C27.654 23.5531 27.699 23.9281 27.781 24.2871C23.691 24.0941 20.066 22.1301 17.64 19.1611C17.213 19.8831 16.974 20.7221 16.974 21.6361C16.974 23.3461 17.844 24.8491 19.162 25.7321C18.355 25.7061 17.596 25.4841 16.934 25.1161L16.934 25.1771C16.934 27.5621 18.627 29.5511 20.88 30.0041C20.467 30.1151 20.031 30.1751 19.584 30.1751C19.27 30.1751 18.969 30.1451 18.668 30.0891C19.299 32.0421 21.113 33.4661 23.272 33.5061C21.592 34.8251 19.463 35.6111 17.17 35.6111C16.78 35.6111 16.391 35.5881 16 35.5441C18.189 36.9381 20.768 37.7531 23.557 37.7531C32.611 37.7531 37.556 30.2571 37.556 23.7671C37.556 23.5581 37.556 23.3471 37.541 23.1371C38.502 22.4481 39.341 21.5771 40.001 20.5891L39.954 20.5691Z" fill="rgb(255,255,255)" fill-rule="nonzero" />
+            </svg>
+          </a>
+
+          <a href="#" class="footer__social-link">
+            <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56.000000" height="56.000000" fill="none" customFrame="#000000">
+			        <rect width="24.000000" height="24.000000" x="16.000000" y="16.000000" fill="rgb(255,255,255)" />
+	            <rect id="Social Button / Light" width="56.000000" height="56.000000" x="0.000000" y="0.000000" />
+	            <circle id="Ellipse 2" cx="28" cy="28" r="28" fill="rgb(255,0,90)" />
+		          <rect id="24 / VK" width="24.000000" height="24.000000" x="16.000000" y="16.000000" fill="rgb(255,255,255)" fill-opacity="0" />
+		          <path id="Vector" d="M39.057 35.3021L36.4367 35.3021C35.4451 35.3021 35.1385 34.5133 33.3566 32.7073C31.8046 31.2048 31.1179 31.002 30.7363 31.002C30.2014 31.002 30.0482 31.1552 30.0482 31.893L30.0482 34.2594C30.0482 34.8964 29.8453 35.278 28.1656 35.278C25.392 35.278 22.3119 33.5983 20.1498 30.4671C16.8925 25.8876 16 22.4514 16 21.7392C16 21.3576 16.1533 21.0015 16.891 21.0015L19.5113 21.0015C20.1724 21.0015 20.4278 21.3065 20.6832 22.0187C21.9799 25.7598 24.1434 29.0428 25.0344 29.0428C25.3649 29.0428 25.5182 28.8895 25.5182 28.0511L25.5182 24.1807C25.416 22.3988 24.474 22.2471 24.474 21.6115C24.474 21.305 24.7294 21 25.1351 21L29.2579 21C29.8183 21 30.0211 21.305 30.0211 21.9661L30.0211 27.1842C30.0211 27.7431 30.2765 27.9475 30.4283 27.9475C30.7588 27.9475 31.0398 27.7431 31.6498 27.1331C33.5339 25.0206 34.8816 21.7633 34.8816 21.7633C35.0604 21.3816 35.3654 21.0255 36.028 21.0255L38.6483 21.0255C39.4371 21.0255 39.6159 21.4312 39.4371 21.9916C39.1066 23.5197 35.9003 28.0481 35.9003 28.0481C35.6208 28.5064 35.5187 28.7092 35.9003 29.2201C36.1798 29.6017 37.0963 30.3905 37.7078 31.1027C38.8271 32.3753 39.6911 33.4435 39.9209 34.1827C40.1764 34.9189 39.7932 35.3006 39.0555 35.3006L39.057 35.3021Z" fill="rgb(255,255,255)" fill-rule="nonzero" />
+            </svg>
+
+          </a>
+        </div>
+          <nav class="footer__nav" aria-label="Меню нижнего колонтитула">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-list-item"><a href="#" class="footer__nav-list-link">О компании</a></li>
+              <li class="footer__nav-list-item"><a href="#" class="footer__nav-list-link">Новости</a></li>
+              <li class="footer__nav-list-item"><a href="#" class="footer__nav-list-link">Помощь</a></li>
+              <li class="footer__nav-list-item"><a href="#" class="footer__nav-list-link">Контакты</a></li>
+            </ul>
+          </nav>
+          <p class="footer__copyright">
+            © 2020 Частный детский сад
+          </p>
+        </div>
+    </footer>
+  
+<script>
+const menuToggle = document.querySelector('.header__menu-btn');
+const navMenu = document.querySelector('.nav-menu');
+menuToggle.addEventListener('click', () => {
+  const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+  menuToggle.setAttribute('aria-expanded', !expanded);
+  navMenu.classList.toggle('active');
+});
+
+
 </script>
 
 </body>

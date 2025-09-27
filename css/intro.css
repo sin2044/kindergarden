@@ -1,0 +1,237 @@
+.intro {
+  position: relative;
+  background: url(../img/background-img.webp) top center no-repeat;
+  /* height: 100vh; */
+}
+
+.intro::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color:  rgba(0, 0, 0, 0.2);
+}
+
+.intro__container {
+  position: relative;
+  max-width: 1110px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+
+}
+
+.intro__text-wrap {
+  padding-top: 273px;
+}
+
+.intro__title {
+  max-width: 480px;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 68px;
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.intro__text {
+  max-width: 445px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  color: var(--white);
+}
+
+.intro__form-wrapper {
+  padding: 203px 0;
+  z-index: 2;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background-color: var(--white);
+  border-radius: 16px;
+}
+.form__text {
+  max-width: 365px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+.form__name-label {
+  margin-bottom: 12px;
+}
+
+.form__name-input {
+width: 365px;
+padding: 16px 20px;
+border-radius: 6px;
+border: 1px solid rgba(0, 0, 0, 0.1);
+transition: .3s;
+
+
+}
+
+.form__name-input::placeholder {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.2);
+  
+}
+
+.form__tel-input {
+  width: 365px;
+  padding: 16px 20px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  transition: .3s;
+}
+
+.form__name-input:hover,
+.form__tel-input:hover {
+    border-color: #007bff; /* Цвет границы при наведении */
+}
+
+.form__name-input:focus,
+.form__tel-input:focus {
+    border-color: #0056b3; /* Цвет границы при фокусе */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Тень при фокусе */
+    outline: none; /* Убираем стандартное обрамление */
+}
+
+.form__name-input:active,
+.form__tel-input:active {
+    border-color: #0056b3; /* Цвет границы при активном состоянии */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Тень при активном состоянии */
+}
+
+.form__tel-input::placeholder {
+  padding: 16px 20px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.form__btn {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--white);
+  padding: 16px 143px;
+  background-color: var(--red-accent);
+  margin-bottom: 24px;
+  transition: .3s;
+}
+
+
+.form__btn:hover {
+  background-color: #690f0f;
+
+}
+
+.form__btn:focus {
+  background-color: #f04444;
+}
+
+.form__btn:active {
+  background-color: #b35f5f;
+}
+
+.form__price-text {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+/* 1. 1440+  – уже есть */
+
+/* 2. 1024-1439 */
+@media (max-width: 1439.98px) {
+  .intro__container {
+    padding: 0 40px;          /* отступы от краёв */
+  }
+}
+
+/* 3. 768-1023  – планшет */
+@media (max-width: 1024px) {
+  .intro__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .intro__text-wrap {
+    padding-top: 120px;
+    text-align: center;
+  }
+  .intro__title {
+    font-size: 48px;
+    line-height: 54px;
+  }
+  .intro__text {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .intro__form-wrapper {
+    padding: 60px 0 100px;
+  }
+  .form {
+    width: 100%;
+    max-width: 480px;
+  }
+}
+
+/* 4. 576-767 – большие телефоны */
+@media (max-width: 767px) {
+  .intro__container {
+    padding: 0 20px;
+  }
+  .intro__title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .intro__text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .form {
+    padding: 30px 20px;
+  }
+  .form__name-input,
+  .form__tel-input {
+    width: 100%;
+  }
+  .form__btn {
+    width: 100%;
+    padding: 16px 0;
+  }
+}
+
+/* 5. 320-575 – мелкие телефоны */
+@media (max-width: 576px) {
+  .intro__title {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .intro__text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .form__text,
+  .form__name-input,
+  .form__tel-input,
+  .form__btn {
+    font-size: 16px;
+  }
+}

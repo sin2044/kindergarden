@@ -1,0 +1,280 @@
+.additional {
+  padding: 120px 0;
+  background-color: var(--blue-primary);
+
+  
+}
+
+.additional__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.additional__title {
+  text-align: center;
+  max-width: 720px;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 68px;
+  color: var(--white);
+  margin-bottom: 24px;
+
+}
+
+.additional__text {
+  max-width: 720px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 64px;
+
+}
+
+.additional__wrap {
+  display: grid;
+  grid-template-columns: repeat(12, 65px);
+  gap: 30px;
+
+}
+
+.additional__card {
+  position: relative;
+  width: 350px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 32px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+
+}
+
+.additional__card::before {
+  content: '';
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%);
+  border-radius: 16px;
+}
+.additional__card-text {
+  max-width: 286px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 35px;
+  color: var(--white);
+  margin-bottom: 10px;
+  text-align: center;
+  z-index: 2;
+}
+
+.additional__card-price {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.8);
+  z-index: 2;
+}
+.card-1-bgr {
+  background-image: url(../img/additional_card-1.webp);
+   grid-column: 1 / span 4; /* колонки 1-4 */
+  grid-row: 1;
+  
+
+}
+
+.card-2-bgr {
+  background-image: url(../img/additional_card-2.webp);
+    grid-column: 5 / span 4; /* колонки 5-8 */
+    grid-row: 1;
+
+}
+
+.card-3-bgr {
+  background-image: url(../img/additional_card-3.webp);
+    grid-column: 9 / span 4; /* колонки 9-12 */
+    grid-row: 1;
+}
+
+.card-4-bgr {
+  background-image: url(../img/additional_card-4.webp);
+  grid-column: 3 / span 4; /* колонки 3-6 */
+  grid-row: 2;
+}
+
+.card-5-bgr {
+background-image: url(../img/additional_card-5.webp);
+  grid-column: 7 / span 4; /* колонки 7-10 */
+  grid-row: 2;
+
+}
+
+
+/* 768px - 1024px (планшет) */
+@media (max-width: 1024px) {
+  .additional {
+    padding: 80px 0;
+  }
+
+  .additional__container {
+    padding: 0 16px; /* Добавил паддинги для контейнера */
+  }
+
+  .additional__title {
+    font-size: 48px;
+    line-height: 50px;
+    margin-bottom: 20px;
+  }
+
+  .additional__text {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 40px;
+  }
+
+  .additional__wrap {
+    grid-template-columns: repeat(12, minmax(0, 1fr)); /* Ширина колонок адаптивная */
+    gap: 20px; /* Уменьшил gap */
+  }
+
+  .additional__card {
+    width: 100%; /* Растягиваем до ширины колонки */
+    max-width: 350px;
+    height: 320px; /* Уменьшил для компактности */
+    padding-bottom: 24px;
+  }
+
+  .additional__card-text {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 8px;
+  }
+
+  .additional__card-price {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  /* Пересчёт spans для 2 в ряд (группировка) */
+  .card-1-bgr {
+    grid-column: 1 / span 6;
+  }
+  .card-2-bgr {
+    grid-column: 7 / span 6;
+  }
+  .card-3-bgr {
+    grid-column: 1 / span 6;
+    grid-row: 2;
+  }
+  .card-4-bgr {
+    grid-column: 7 / span 6;
+    grid-row: 2;
+  }
+  .card-5-bgr {
+    grid-column: 5 / span 6; /* Сместил для баланса */
+    grid-row: 3;
+  }
+}
+
+/* 480px - 767px (малый планшет/large mobile) */
+@media (max-width: 767px) {
+  .additional {
+    padding: 60px 0;
+  }
+
+  .additional__title {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 16px;
+  }
+
+  .additional__text {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 30px;
+  }
+
+  .additional__wrap {
+    grid-template-columns: 1fr; /* Одна колонка */
+    gap: 16px;
+  }
+
+  .additional__card {
+    width: 100%;
+    max-width: 100%;
+    height: 280px;
+    padding-bottom: 20px;
+  }
+
+  .additional__card-text {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 6px;
+  }
+
+  .additional__card-price {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  /* Все spans на 1 ряд */
+  .card-1-bgr,
+  .card-2-bgr,
+  .card-3-bgr,
+  .card-4-bgr,
+  .card-5-bgr {
+    grid-column: 1 / span 1;
+    grid-row: auto; /* Авторасстановка */
+  }
+}
+
+/* 320px - 479px (mobile) */
+@media (max-width: 479px) {
+  .additional {
+    padding: 40px 0;
+  }
+
+  .additional__title {
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 12px;
+  }
+
+  .additional__text {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+
+  .additional__wrap {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .additional__card {
+    width: 100%;
+    max-width: 100%;
+    height: 240px; /* Ещё меньше для very small screens */
+    padding-bottom: 16px;
+  }
+
+  .additional__card-text {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 4px;
+    max-width: 280px; /* Подогнал под экран */
+  }
+
+  .additional__card-price {
+    font-size: 14px;
+    line-height: 18px;
+  webp

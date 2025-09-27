@@ -1,0 +1,59 @@
+.quote {
+  padding: 100px 130px
+}
+
+.quote__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+
+}
+
+
+
+.quote__blockquote {
+  max-width: 919px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 54px;
+  color: var(--black);
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.quote__author {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+
+@media (max-width: 47.99em) { /* ≈767px */
+  .quote {
+    padding: 50px 20px; /* Минимальные отступы для пары воздуха */
+  }
+  
+  .quote__container {
+    gap: 20px; /* Меньше расстояния между элементами */
+  }
+  
+  .quote__icon svg {
+    transform: scale(0.75); /* Уменьшает иконку до 48px (64px * 0.75) */
+    transform-origin: center;
+  }
+  
+  .quote__blockquote {
+    font-size: 28px; /* Комфортный размер для чтения на телефоне */
+    line-height: 32px;
+    padding-bottom: 40px; /* Меньше нижнего отступа */
+    max-width: 100%; /* Растягивает на всю ширину, чтобы влезло */
+  }
+  
+  .quote__author {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

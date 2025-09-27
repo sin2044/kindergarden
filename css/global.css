@@ -81,6 +81,9 @@ figure,
 fieldset {
   margin: 0;
 }
+blockquote {
+  margin: 0;
+}
 
 address {
   font-style: normal;
@@ -100,7 +103,6 @@ iframe {
 }
 
 .container {
-  max-width: 1440px;
-  padding: 0 40px;
+  max-width: 1110px;
   margin: 0 auto;
 }

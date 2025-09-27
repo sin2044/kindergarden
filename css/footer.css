@@ -1,0 +1,162 @@
+.footer {
+  padding: 80px 0;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer__social {
+  display: flex;
+  gap: 10px;
+}
+
+.footer__nav-list {
+  display: flex;
+  gap: 40px;
+}
+.footer__nav-list-link{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.footer__social-link svg {
+  transition: fill 0.3s ease;
+}
+
+.footer__nav-list-link:hover,
+.footer__nav-list-link:focus
+.footer__nav-list-link:active {
+  color: #ffcccc; /* светло-розовый */
+  text-decoration: underline;
+  transition: .3s;
+}
+
+.footer__social-link:hover,
+.footer__social-link:focus,
+.footer__social-link:active {
+  background-color: #ff005a; /* ярко-розовый фон */
+  transform: scale(1.1);
+  outline: none;
+  
+}
+
+
+.footer__copyright {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 60px 20px;
+  }
+  .footer__container {
+    gap: 30px;
+  }
+  .footer__nav-list {
+    gap: 30px;
+  }
+  .footer__nav-list-link {
+    font-size: 16px;
+  }
+  .footer__copyright {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 50px 16px;
+  }
+
+  .footer__container {
+    gap: 24px;
+  }
+
+  /* Переход к вертикальному расположению навигации и соц. сети для узких экранов */
+  .footer__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__social {
+    gap: 14px;
+  }
+  
+  .footer__nav-list {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .footer__nav-list-link {
+    font-size: 15px;
+  }
+
+  .footer__copyright {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 12px;
+  }
+
+  .footer__container {
+    gap: 20px;
+  }
+
+  .footer__social {
+    gap: 12px;
+  }
+
+  .footer__nav-list {
+    gap: 16px;
+  }
+
+  .footer__nav-list-link {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .footer__copyright {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer {
+    padding: 30px 10px;
+  }
+
+  .footer__container {
+    gap: 16px;
+  }
+
+  .footer__social {
+    gap: 10px;
+  }
+
+  .footer__nav-list {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .footer__nav-list-link {
+    font-size: 13px;
+  }
+
+  .footer__copyright {
+    font-size: 11px;
+  }
+}
