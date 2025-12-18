@@ -99,20 +99,20 @@ transition: .3s;
 
 .form__name-input:hover,
 .form__tel-input:hover {
-    border-color: #007bff; /* Цвет границы при наведении */
+    border-color: #007bff; 
 }
 
 .form__name-input:focus,
 .form__tel-input:focus {
-    border-color: #0056b3; /* Цвет границы при фокусе */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Тень при фокусе */
-    outline: none; /* Убираем стандартное обрамление */
+    border-color: #0056b3; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+    outline: none; 
 }
 
 .form__name-input:active,
 .form__tel-input:active {
-    border-color: #0056b3; /* Цвет границы при активном состоянии */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Тень при активном состоянии */
+    border-color: #0056b3; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
 }
 
 .form__tel-input::placeholder {
@@ -156,16 +156,14 @@ transition: .3s;
   text-align: center;
 }
 
-/* 1. 1440+  – уже есть */
 
-/* 2. 1024-1439 */
 @media (max-width: 1439.98px) {
   .intro__container {
-    padding: 0 40px;          /* отступы от краёв */
+    padding: 0 40px;          
   }
 }
 
-/* 3. 768-1023  – планшет */
+
 @media (max-width: 1024px) {
   .intro__container {
     flex-direction: column;
@@ -192,7 +190,6 @@ transition: .3s;
   }
 }
 
-/* 4. 576-767 – большие телефоны */
 @media (max-width: 767px) {
   .intro__container {
     padding: 0 20px;
@@ -218,7 +215,6 @@ transition: .3s;
   }
 }
 
-/* 5. 320-575 – мелкие телефоны */
 @media (max-width: 576px) {
   .intro__title {
     font-size: 28px;

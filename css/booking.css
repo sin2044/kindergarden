@@ -71,20 +71,20 @@
 }
 
 .booking__form-input:hover {
-    border-color: #007bff; /* Цвет границы при наведении */
+    border-color: #007bff; 
 }
 
 
 .booking__form-input:focus {
-    border-color: #0056b3; /* Цвет границы при фокусе */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Тень при фокусе */
-    outline: none; /* Убираем стандартное обрамление */
+    border-color: #0056b3; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+    outline: none; 
 }
 
 
 .booking__form-input:active {
-    border-color: #0056b3; /* Цвет границы при активном состоянии */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Тень при активном состоянии */
+    border-color: #0056b3; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
 }
 .booking__form-input::placeholder {
   font-size: 18px;
@@ -163,7 +163,7 @@
 
 .booking__form-radio-label:hover .booking__form-span-radio {
   border-color: var(--red-accent);
-  background-color: rgba(255, 0, 0, 0.1); /* очень легкий прозрачный красный фон */
+  background-color: rgba(255, 0, 0, 0.1); 
   cursor: pointer;
 }
 
@@ -176,7 +176,7 @@
 .booking__form-radio-label:active .booking__form-span-radio {
   background-color: var(--red-accent);
   border-color: var(--red-accent);
-  transform: scale(0.95); /* уменьшение с эффектом нажатия */
+  transform: scale(0.95); 
   transition: transform .3s ease;
 }
 
@@ -223,7 +223,7 @@
   }
 }
 
-/* При ширине экрана до 758px */
+
 @media (max-width: 758px) {
   .booking__container {
     padding: 0 20px;
@@ -253,7 +253,7 @@
   }
 }
 
-/* При ширине экрана до 480px */
+
 @media (max-width: 480px) {
   .booking__form-input {
     width: 100%;
@@ -287,7 +287,7 @@
   }
 }
 
-/* При ширине экрана до 320px */
+
 @media (max-width: 320px) {
   .booking__form-input {
     padding: 10px 12px;

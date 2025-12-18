@@ -133,7 +133,6 @@
       }
     }
 
-    /* Добавляем медиазапрос для 320px */
     @media (max-width: 320px) {
       .info {
         background-size: 100% auto;

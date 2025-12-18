@@ -56,7 +56,7 @@
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(4, 1fr);
-  justify-content: center; /* центрируем контент */
+  justify-content: center; 
   
 }
 
@@ -122,12 +122,12 @@
   }
 
   .benefits__card {
-    padding: 0 10px; /* немного отступы для контента */
+    padding: 0 10px; 
   }
 
   .benefits__card-title {
-    font-size: 22px; /* чуть меньше заголовок */
-    max-width: 100%; /* расширить на всю ширину */
+    font-size: 22px; 
+    max-width: 100%; 
     margin-bottom: 12px;
   }
 
@@ -210,7 +210,7 @@
   }
 }
 
-/* Очень маленькие экраны — 320px и ниже */
+
 @media (max-width: 320px) {
   .benefits {
     padding: 60px 12px;

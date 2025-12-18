@@ -31,25 +31,25 @@
 }
 
 
-@media (max-width: 47.99em) { /* ≈767px */
+@media (max-width: 47.99em) { 
   .quote {
-    padding: 50px 20px; /* Минимальные отступы для пары воздуха */
+    padding: 50px 20px; 
   }
   
   .quote__container {
-    gap: 20px; /* Меньше расстояния между элементами */
+    gap: 20px; 
   }
   
   .quote__icon svg {
-    transform: scale(0.75); /* Уменьшает иконку до 48px (64px * 0.75) */
+    transform: scale(0.75); 
     transform-origin: center;
   }
   
   .quote__blockquote {
-    font-size: 28px; /* Комфортный размер для чтения на телефоне */
+    font-size: 28px; 
     line-height: 32px;
-    padding-bottom: 40px; /* Меньше нижнего отступа */
-    max-width: 100%; /* Растягивает на всю ширину, чтобы влезло */
+    padding-bottom: 40px; 
+    max-width: 100%; 
   }
   
   .quote__author {

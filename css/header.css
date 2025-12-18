@@ -54,7 +54,7 @@
 .header__list-link:hover,
 .header__list-link:focus,
 .header__list-link:active {
-  color: #ffcccc; /* светло-розовый */
+  color: #ffcccc; 
   text-decoration: underline;
   transition: .3s;
 }
@@ -68,7 +68,7 @@
 
 .header__link-tel:hover,
 .header__link-tel:focus {
-  color: #ffcccc; /* светло-розовый */
+  color: #ffcccc; 
   text-decoration: underline;
   transition: all .3s;
 }
@@ -77,17 +77,17 @@
 
   .header__menu-btn {
     display: flex;
-    order: 2; /* Кнопка будет после навигации */
-    margin-left: auto; /* Сдвигает кнопку вправо */
+    order: 2; 
+    margin-left: auto; 
   }
 
   .nav-menu {
     display: none;
-    order: 1; /* Навигация будет слева */
-    display: none; /* Скрываем меню по умолчанию */
-    flex-direction: column; /* Вертикальное расположение пунктов меню */
-    width: 100%; /* Занимает всю ширину */
-    margin-top: 10px; /* Отступ сверху для отделения от кнопки */
+    order: 1; 
+    display: none; 
+    flex-direction: column; 
+    width: 100%; 
+    margin-top: 10px; 
 
   }
 
@@ -96,8 +96,8 @@
   }
   
   .header__list {
-    flex-direction: column; /* Вертикальное расположение пунктов меню */
-    gap: 10px; /* Отступ между пунктами меню */
+    flex-direction: column; 
+    gap: 10px; 
   }
   .header__link-tel {
     display: none;

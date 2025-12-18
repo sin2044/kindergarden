@@ -57,7 +57,7 @@
   top: 0;
   right: 0;
   width: 705px;
-  height: 100%; /* во всю высоту секции */
+  height: 100%; 
   box-sizing: border-box;
 }
 
@@ -89,7 +89,6 @@
 }
 
 
-/* ≤768px: уменьшаем высоту и делаем немного компактнее */
 @media (max-width: 768px) {
   .location {
     padding: 80px 0;
@@ -115,7 +114,6 @@
   }
 }
 
-/* ≤480px: вертикальная верстка (текст сверху, карта снизу), высота под контент */
 @media (max-width: 480px) {
   .location {
     padding: 60px 20px;
@@ -123,7 +121,7 @@
   }
 
   .location__container {
-    display: block; /* отменяем grid */
+    display: block; 
     max-width: 100%;
     height: auto;
   }
@@ -143,14 +141,14 @@
   }
 }
 
-/* ≤320px: еще более компактно */
+
 @media (max-width: 320px) {
   .location {
     padding: 40px 15px;
   }
 
   .location__text-wrap {
-    font-size: 14px; /* можно уменьшить шрифты, например */
+    font-size: 14px; 
   }
 
   .location__map-wrap {

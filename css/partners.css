@@ -148,12 +148,12 @@
   }
 
   .partners__card {
-    max-width: 45%; /* 2 карточки в ряд */
+    max-width: 45%; 
     flex: 1 1 45%;
   }
 }
 
-/* 320px и ниже — очень маленькие экраны */
+
 @media (max-width: 320px) {
   .partners {
     padding: 30px 0;
